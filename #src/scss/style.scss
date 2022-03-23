@@ -1,0 +1,50 @@
+//^ Файл обнуляющих стилей
+@import "nullstyle";
+
+//^ Файл миксинов
+@import "mixin";
+
+//^ Файлы стилей страниц
+
+
+//^ Подключение ширфтов
+
+@import "fonts";
+
+
+body, html{
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden; //^ убираем горизонтальный скролл
+}
+
+.wrapper{
+  overflow: hidden; //* для прижатия footer к низу
+  display: flex; //* для прижатия footer к низу
+  flex-direction: column; //* для прижатия footer к низу
+  min-height: 100%; //* для прижатия footer к низу
+}
+
+.header{
+}
+.main{
+  flex: 1 1 auto; //* для прижатия footer к низу
+  background-color: rgba(67, 4, 240, 0.137);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  min-height: 100%;
+}
+
+
+.footer{
+}
+
+//* Селектор по атрибуту обращается ко всем элементам где содержится  "__container"
+[class*="__container"] {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+
